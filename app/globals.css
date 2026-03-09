@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f8f7f4;
+  color: #111111;
+  font-family: var(--font-body), sans-serif;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-14 md:py-20;
+  }
+
+  .hairline-divider {
+    @apply border-t border-line;
+  }
+
+  .editorial-card {
+    @apply rounded-[1.6rem] border border-line bg-white/60 shadow-card backdrop-blur-sm;
+  }
+}

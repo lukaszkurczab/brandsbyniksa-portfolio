@@ -1,49 +1,38 @@
-# brandsbyniksa-portfolio
+# BrandsByNiksa Portfolio v2
 
-Portfolio one-page dla marki osobistej (design + budowa marek osobistych) oparte na Next.js, TypeScript i SCSS Modules.
+Nowoczesne portfolio marki osobistej zbudowane w `Next.js + TypeScript + Tailwind`.
 
 ## Stack
 
 - Next.js 16 (App Router)
 - TypeScript
-- SCSS Modules + `app/globals.scss`
+- Tailwind CSS 3
 - API route: `POST /api/contact`
 
-## Uruchomienie lokalnie
+## Uruchomienie
 
 ```bash
 npm install
 npm run dev
 ```
 
-Aplikacja domyślnie działa pod adresem `http://localhost:3000`.
-
-## Build produkcyjny
+## Build
 
 ```bash
+npm run lint
 npm run build
 npm run start
 ```
 
-## Test endpointu kontaktowego
+## Kluczowe miejsca edycji contentu
 
-Przykład poprawnego requestu:
+- `data/portfolio.ts` - projekty, usługi, proces, opinie, media, copy sekcji
+- `components/portfolio/HeroSection.tsx` - hero i CTA
+- `components/portfolio/ContactSection.tsx` - kontakt + dane kontaktowe
+- `components/portfolio/ProjectsCatalog.tsx` - logika filtrów na `/projekty`
 
-```bash
-curl -X POST http://localhost:3000/api/contact \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Anna Kowalska","email":"anna@example.com","message":"Chcę omówić nową markę."}'
-```
+## TODO pod finalizację
 
-## GitHub remote
-
-Po ręcznym utworzeniu repo w GitHub UI:
-
-```bash
-git remote add origin <URL_DO_REPO>
-git push -u origin main
-```
-
-## Deploy
-
-Repo jest gotowe do wdrożenia na Vercel (import projektu z GitHub).
+- Podmiana placeholderów obrazów/video
+- Dodanie finalnego copy i metryk case studies
+- Opcjonalna rozbudowa `/projekty/[slug]`
